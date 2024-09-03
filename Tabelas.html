@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="Index.html">
+                <img src="imagens/dog.jpg" alt="Dog Fofo Cabeçalho" width="100">
+            </a>
+        <hr>
+            <ul>
+                <li>
+                    <a href="Index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Projetos.html">Projetos</a>
+                </li>
+                <li>
+                    <a href="About_me.html">About Me</a>
+                </li>
+                <li>
+                    <a href="Tabelas.html">Tabelas</a>
+                </li>
+                <li>
+                    <a href="Formularios.html">Formularios</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>Tabelas HTML</h1>
+            <section id = "students">
+                <h2>Tabela Alunos </h2>
+                    <table border="2">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Matrícula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João</td>
+                                <td>joao@hotmail.com</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>Kayky</td>
+                                <td>kayky@hotmail.com</td>
+                                <td>5678</td>
+                            </tr>
+                            <tr>
+                                <td>José</td>
+                                <td>José@hotmail.com</td>
+                                <td>9101112</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+            <section id = "Estoque"> 
+                <h2>Tabela estoque </h2>
+                    <table border="2">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Qnt.Estoque</th>
+                                <th>Valor</th>
+                                <th>Validade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bolo</td>
+                                <td>3</td>
+                                <td colspan="2">R$10,00</td>    <!-- junta colunas lado a lado-->
+                                <td rowspan="2">15/08/2024</td> <!-- junta linhas de cima com a de baixo ou vice e versa-->
+                            </tr>
+                            <tr>
+                                <td>Carro</td>
+                                <td>2</td>
+                                <td>R$50000,00</td>
+                                <!-- <td>15/08/2024</td> -->
+                            </tr>
+                            <tr>
+                                <td>Sofá</td>
+                                <td>7</td>
+                                <td>R$670,00</td>
+                                <td>NULL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            </section>
+
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+
+</body>
+
+</html>
