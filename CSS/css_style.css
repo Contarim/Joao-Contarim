@@ -60,3 +60,15 @@ p {
         text-align: justify;
 
 }
+
+a {
+        font-size: medium;
+}
+
+a:visited {
+        color: darkorchid;
+}
+
+a:hover {
+        color: deeppink;
+}
