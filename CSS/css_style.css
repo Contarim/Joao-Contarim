@@ -72,3 +72,15 @@ a:visited {
 a:hover {
         color: deeppink;
 }
+
+table, td, th {
+        border: 2px solid blue;
+        border-radius: 10px;
+}
+
+table {
+        font-size: 20px;
+        border-collapse: separate;
+        border-radius: 10px;
+        position: static;
+}
