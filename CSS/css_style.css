@@ -82,5 +82,22 @@ table {
         font-size: 20px;
         border-collapse: separate;
         border-radius: 10px;
-        position: static;
+        margin-top: 10px;
+}
+
+table tr:first-child {
+        background-color: rgb(72, 72, 112);
+
+
+}
+
+.tabelas {
+        font-size: 20px;
+        border-collapse: separate;
+        border-radius: 10px;
+        margin-top: 220px;
+}
+
+hr {
+        margin: 10px;
 }
