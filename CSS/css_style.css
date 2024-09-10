@@ -87,6 +87,12 @@ table {
 
 table tr:first-child {
         background-color: rgb(72, 72, 112);
+        color: rgb(255, 0, 0);
+}
+
+table tr:nth-child(n +2) {
+        background-color: #999;
+
 }
 
 .tabelas {
