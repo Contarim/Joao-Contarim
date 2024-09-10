@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+    <link rel="stylesheet" href="css/css_style.css">
 </head>
 
 <body>
@@ -34,21 +35,18 @@
         </nav>
     </header>
 
-    <hr>
-
     <main>
         <h1>Tabelas HTML</h1>
+        <div class="tabelas">
             <section id = "students">
                 <h2>Tabela Alunos </h2>
-                    <table border="2">
-                        <thead>
+                <hr>
+                    <table>
                             <tr>
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Matrícula</th>
                             </tr>
-                        </thead>
-                        <tbody>
                             <tr>
                                 <td>João</td>
                                 <td>joao@hotmail.com</td>
@@ -64,26 +62,25 @@
                                 <td>José@hotmail.com</td>
                                 <td>9101112</td>
                             </tr>
-                        </tbody>
                     </table>
+                <hr>
             </section>
+        </div>
+        <div class="tabelas" style="margin-top: 0px;">
             <section id = "Estoque"> 
-                <h2>Tabela estoque </h2>
-                    <table border="2">
-                        <thead>
+                <h2>Tabela Estoque</h2>
+                    <table>
                             <tr>
                                 <th>Produto</th>
                                 <th>Qnt.Estoque</th>
                                 <th>Valor</th>
                                 <th>Validade</th>
                             </tr>
-                        </thead>
-                        <tbody>
                             <tr>
                                 <td>Bolo</td>
                                 <td>3</td>
-                                <td colspan="2">R$10,00</td>    <!-- junta colunas lado a lado-->
-                                <td rowspan="2">15/08/2024</td> <!-- junta linhas de cima com a de baixo ou vice e versa-->
+                                <td colspan="1">R$10,00</td>    <!-- colspawn junta colunas lado a lado-->
+                                <td rowspan="1">15/08/2024</td> <!-- rowspan junta linhas de cima com a de baixo ou vice e versa-->
                             </tr>
                             <tr>
                                 <td>Carro</td>
@@ -95,12 +92,11 @@
                                 <td>Sofá</td>
                                 <td>7</td>
                                 <td>R$670,00</td>
-                                <td>NULL</td>
+                                <td colspan="2">10/10/2023</td>
                             </tr>
-                        </tbody>
                     </table>
-
             </section>
+        </div>
 
 
     </main>
