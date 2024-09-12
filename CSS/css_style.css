@@ -1,7 +1,7 @@
-* {
+/* * {
         margin: 0;
         padding: 0;
-}
+} */
 
 :root {
         /* font-size: 62.5%;  preciso entender melhor ainda isso*/
@@ -13,7 +13,7 @@ html, body {
         width: 100%;
 }
 
-h1{
+h1 {
         width: 100%;
         font-size: 80px;
         font-weight: 200;
@@ -104,4 +104,25 @@ table tr:nth-child(n +2) {
 
 hr {
         margin: 10px;
+}
+
+ul, ol {
+        font-size: 15px;
+}
+
+ul {
+        list-style-type: square;
+}
+
+ol {
+        list-style-type: disc;
+}
+
+.box {
+        height: 200px;
+        width: 300px;
+        border: 5px solid red;
+        background-color: #999;
+        display: ;
+        margin-top: 300px;
 }
