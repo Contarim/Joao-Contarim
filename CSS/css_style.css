@@ -1,7 +1,6 @@
-/* * {
-        margin: 0;
-        padding: 0;
-} */
+* {
+        box-sizing: border-box;
+}
 
 :root {
         /* font-size: 62.5%;  preciso entender melhor ainda isso*/
@@ -121,8 +120,11 @@ ol {
 .box {
         height: 200px;
         width: 300px;
-        border: 5px solid red;
-        background-color: #999;
-        display: ;
         margin-top: 300px;
+        margin-left: 50px;
+        padding: 10px;
+        border: 5px solid red;
+        border-radius: 10px;
+        background-color: #999;
+        color: rgb(0, 70, 131);
 }
