@@ -128,3 +128,10 @@ ol {
         background-color: #999;
         color: rgb(0, 70, 131);
 }
+
+.container {
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: row-reverse; */
+}
