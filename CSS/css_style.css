@@ -133,25 +133,47 @@ hr {
         list-style-type: disc;
 } */
 
+.contact-list {
+        position: relative;
+}
+
+.contact-list h2 {
+        top: 120px;
+        position: sticky;
+        background-color: blueviolet;
+
+}
 .box {
         height: 200px;
-        width: 300px;
-        margin-top: 300px;
+        width: 500px;
+        margin-top: 50px;
         margin-left: 50px;
-        padding: 10px;
+        padding: 15px;
         border: 5px solid red;
         border-radius: 10px;
         background-color: #999;
         color: rgb(0, 70, 131);
+        display: inline-block;
 }
 
-nav.container {
+.box:nth-child(0){
+        float: right;
+}
+
+nav.container  {
         position: fixed;
         background-color: aqua;
         width: 100%;
         height: 120px;
         font-size: 20px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
+        z-index: 1;
+}
+
+.container-list{
+        display: flex;
+        align-items: center;
+        justify-content: end;
 }
