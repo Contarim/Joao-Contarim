@@ -1,5 +1,7 @@
 * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0px;
 }
 
 :root {
@@ -51,6 +53,11 @@ header {
         margin-left: 100px;
         margin-top: 100px;
 }
+
+main {
+        padding-top: 120px;
+
+}       
 
 p {
         color: aqua;
@@ -105,33 +112,68 @@ hr {
         margin: 10px;
 }
 
-ul, ol {
+/* ul, ol {
         font-size: 15px;
-}
+        display: flex;
+        justify-content: space-between;
+} */
 
-ul {
+/* ul,li {
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+} */
+
+/* ul {
         list-style-type: square;
-}
+} */
 
-ol {
+/* ol {
         list-style-type: disc;
+} */
+
+.contact-list {
+        position: relative;
 }
 
+.contact-list h2 {
+        top: 120px;
+        position: sticky;
+        background-color: blueviolet;
+
+}
 .box {
         height: 200px;
-        width: 300px;
-        margin-top: 300px;
+        width: 500px;
+        margin-top: 50px;
         margin-left: 50px;
-        padding: 10px;
+        padding: 15px;
         border: 5px solid red;
         border-radius: 10px;
         background-color: #999;
         color: rgb(0, 70, 131);
+        display: inline-block;
 }
 
-.container {
+.box:nth-child(0){
+        float: right;
+}
+
+nav.container  {
+        position: fixed;
+        background-color: aqua;
+        width: 100%;
+        height: 120px;
         font-size: 20px;
         display: flex;
-        flex-direction: row;
-        /* flex-direction: row-reverse; */
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+}
+
+.container-list{
+        display: flex;
+        align-items: center;
+        justify-content: end;
 }
