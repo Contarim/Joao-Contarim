@@ -42,12 +42,12 @@
 
     <main>
         <h1>Tabelas HTML</h1>
-        <div class="tabelas">
-            <section id="students">
-                <h2>Tabela Alunos </h2>
+        <div>
+            <section>
                 <hr>
-                <table>
-                    <tr>
+                <table id="students" class="tabelas">
+                    <h2>Tabela Alunos </h2>
+                    <tr data-company="STD">
                         <th>Nome</th>
                         <th>E-mail</th>
                         <th>Matrícula</th>
@@ -72,10 +72,11 @@
             </section>
         </div>
         <div class="tabelas" style="margin-top: 0px;">
-            <section id="Estoque">
-                <h2>Tabela Estoque</h2>
-                <table>
-                    <tr>
+            <section>
+                <hr>
+                <table id="Estoque" class="tabelas">
+                    <h2>Tabela Estoque</h2>
+                    <tr data-company="STQ">
                         <th>Produto</th>
                         <th>Qnt.Estoque</th>
                         <th>Valor</th>

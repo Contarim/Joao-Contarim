@@ -92,7 +92,7 @@ table {
 }
 
 table tr:first-child {
-        background-color: rgb(72, 72, 112);
+        /* background-color: rgb(72, 72, 112); */
         color: rgb(255, 0, 0);
 }
 
@@ -105,7 +105,7 @@ table tr:nth-child(n +2) {
         font-size: 20px;
         border-collapse: separate;
         border-radius: 10px;
-        margin-top: 220px;
+        /* margin-top: 200px; */
 }
 
 hr {
@@ -201,4 +201,16 @@ nav.container  {
         display: flex;
         align-items: center;
         justify-content: end;
+}
+
+[data-company="STD"] {
+        background-color: aqua;
+}
+
+[data-company="STQ"] {
+        background-color: aqua;
+}
+
+[data-company] {
+        /* display: none; */
 }
