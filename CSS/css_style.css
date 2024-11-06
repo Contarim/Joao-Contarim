@@ -214,3 +214,20 @@ nav.container  {
 [data-company] {
         /* display: none; */
 }
+
+section {
+        opacity: 1;
+        margin-top: 10px;
+}
+
+[data-button="products"] {
+        background-color: blueviolet;
+        color: aliceblue;
+        border: 2px;
+        border-color: aquamarine;
+        padding: 2px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+}
