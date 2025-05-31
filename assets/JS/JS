@@ -1,0 +1,20 @@
+document.querySelectorAll('.nav-item.dropdown').forEach(function(dropdown) {
+    let timeout;
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const menu = dropdown.querySelector('.dropdown-menu');
+
+    // Mostrar ao passar o mouse
+    dropdown.addEventListener('mouseenter', function() {
+        clearTimeout(timeout);
+        menu.classList.add('show');
+        toggle.setAttribute('aria-expanded', 'true');
+    });
+
+    // Esconder ao sair do mouse
+    dropdown.addEventListener('mouseleave', function() {
+        timeout = setTimeout(function() {
+            menu.classList.remove('show');
+            toggle.setAttribute('aria-expanded', 'false');
+        }, 100); // Pequeno delay para evitar sumir instantaneamente
+    });
+});

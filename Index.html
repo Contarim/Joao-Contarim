@@ -5,82 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ff003c'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='37' font-family='Montserrat,Arial,sans-serif' fill='black' font-weight='900'%3EJC%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <span class="logo">Meu Portfólio</span>
-            <ul class="nav-menu">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-danger sticky-top">
+    <div class="container">
+        <a class="navbar-brand text-danger fw-bold" href="#">Portfólio de João Victor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
-                    <a href="#">Projetos</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#projects">Ver Projetos</a></li>
-                        <li><a href="#">Destaques</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="0">
+                        Projetos
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#projects">Ver Projetos</a></li>
+                        <li><a class="dropdown-item" href="#">Destaques</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#">Habilidades</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#skills">Minhas Habilidades</a></li>
-                        <li><a href="#">Certificados</a></li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Currículo
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li>
+                            <a class="dropdown-item" href="assets/Curriculo/João_Victor_Contarim.pdf" target="_blank">
+                                Visualizar Currículo
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="assets/Curriculo/João_Victor_Contarim.pdf" download>
+                                Baixar Currículo
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a href="#">Contato</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#contact">Fale comigo</a></li>
-                        <li><a href="#">Redes Sociais</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contato</a>
                 </li>
             </ul>
         </div>
-    </nav>
-    
-    <header>
-        <h1>Bem-vindo ao Meu Portfólio</h1>
-        <p>Olá! Eu sou [Seu Nome], um [sua profissão ou área de atuação].</p>
-    </header>
-    
-    <section id="projects">
-        <h2>Meus Projetos</h2>
-        <div class="project">
-            <h3>
-                <a href="https://gerador-de-senhas-2gah.onrender.com/" target="_blank">
-                    Gerador de Senhas Aleatórias
-                </a>
-            </h3>
-            <p>
-                Projeto web para gerar senhas seguras e aleatórias.<br>
-                <strong>Tecnologias:</strong> HTML, CSS, JavaScript e Flask (Python).
-            </p>
-            <a class="btn-projeto" href="https://gerador-de-senhas-2gah.onrender.com/" target="_blank">
-                Acessar Projeto
-            </a>
+    </div>
+</nav>
+
+
+    <header class="bg-dark text-light py-4 shadow">
+        <div class="container d-flex flex-column flex-md-row align-items-center gap-4">
+            <img src="assets/Imagens/eu.png" alt="Foto de João" class="rounded-circle border border-danger shadow" style="width:130px;height:130px;object-fit:cover;">
+            <div>
+                <h1 class="fw-bold text-danger mb-1" style="font-size:2.3rem;">Bem-vindo ao Meu Portfólio</h1>
+                <p class="fw-bold mb-1" style="font-size:1.5rem; color:#ffffffd7;">João Victor Mendes Contarim</p>
+                <p class="fw-semibold mb-2" style="font-size:1.2rem; color:#ffffffd7;">Desenvolvedor Full-Stack</p>
+                <div class="d-flex gap-3 mt-2">
+                    <a href="mailto:joaocontar@hotmail.com" target="_blank" class="btn btn-outline-danger rounded-circle contact-btn" title="E-mail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joao-contarim" target="_blank" class="btn btn-outline-primary rounded-circle contact-btn" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Contarim" target="_blank" class="btn btn-outline border-purple rounded-circle contact-btn" title="GitHub">
+                        <i class="fab fa-github" style="color:#6e40c9"></i>
+                    </a>
+                    <a href="https://wa.me/16991501035" target="_blank" class="btn btn-outline-success rounded-circle contact-btn" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- Adicione outros projetos aqui -->
+    </header>
+
+    <section id="about" class="container my-5">
+        <h2 class="text-danger mb-4">Sobre Mim</h2>
+        <div class="card bg-dark text-light border-danger mb-4 shadow">
+            <div class="card-body">
+                <p>
+                    Olá! Sou João Victor Contarim, apaixonado por tecnologia e desenvolvimento web. 
+                    (Adicione aqui sua história, experiências, motivações e objetivos profissionais.)
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Minhas Habilidades</h2>
-        <ul>
-            <li>Habilidade 1</li>
-            <li>Habilidade 2</li>
-            <li>Habilidade 3</li>
-        </ul>
+    <section id="projects" class="container my-5">
+        <h2 class="text-danger mb-4">Meus Projetos</h2>
+        <div class="card bg-dark text-light border-danger mb-4 shadow">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Gerador de Senhas Aleatórias</h5>
+                <p class="card-text">
+                    Projeto web para gerar senhas seguras e aleatórias.<br>
+                    <strong>Tecnologias:</strong> HTML, CSS, JavaScript e Flask (Python).
+                </p>
+                <a href="https://gerador-de-senhas-2gah.onrender.com/" target="_blank" class="btn btn-danger">Acessar Projeto</a>
+            </div>
+        </div>
+        <!-- Outros projetos -->
     </section>
 
-    <section id="contact">
-        <h2>Contato</h2>
-        <p>Você pode me encontrar em:</p>
-        <ul>
-            <li>Email: seuemail@example.com</li>
-            <li>LinkedIn: seu-linkedin</li>
-            <li>GitHub: seu-github</li>
-        </ul>
+    <section id="skills" class="container my-5">
+        <h2 class="text-danger mb-4">Minhas Habilidades</h2>
+        <div class="card bg-dark text-light border-danger mb-4 shadow">
+            <div class="card-body">
+                <ul class="mb-0">
+                    <li>Habilidade 1</li>
+                    <li>Habilidade 2</li>
+                    <li>Habilidade 3</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 [Seu Nome]. Todos os direitos reservados.</p>
+    <section id="contact" class="container my-5">
+        <h2 class="text-danger mb-4">Contato</h2>
+        <div class="card bg-dark text-light border-danger mb-4 shadow">
+            <div class="card-body">
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="mailto:joaocontar@hotmail.com" class="btn btn-dark border-danger d-flex align-items-center gap-2 contact-btn">
+                        <i class="fas fa-envelope text-danger"></i> joaocontar@hotmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/joao-contarim" target="_blank" class="btn btn-dark border-primary d-flex align-items-center gap-2 contact-btn">
+                        <i class="fab fa-linkedin text-primary"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Contarim" target="_blank" class="btn btn-dark border-purple d-flex align-items-center gap-2 contact-btn">
+                        <i class="fab fa-github" style="color:#6e40c9"></i> GitHub
+                    </a>
+                    <a href="https://wa.me/16991501035" target="_blank" class="btn btn-dark border-success d-flex align-items-center gap-2 contact-btn">
+                        <i class="fab fa-whatsapp text-success"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light text-center py-3 border-top border-danger mt-5">
+        &copy; 2025 João Victor Contarim. Todos os direitos reservados.
     </footer>
+    <!-- Bootstrap Bundle JS (inclui Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/JS/JS"></script>
 </body>
 </html>

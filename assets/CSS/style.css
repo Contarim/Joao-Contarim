@@ -7,197 +7,266 @@
 
 /* Body styles */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(135deg, #10131a 0%, #232b38 100%);
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #10151d 0%, #10151d 100%);
     color: #e0e6ed;
 }
 
 /* Container styles */
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Header styles */
-header {
-    background: linear-gradient(90deg, #181f2b 0%, #232b38 100%);
-    color: #fff;
-    padding: 32px 0 16px 0;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(31,64,104,0.25);
-}
-
-header h1 {
-    color: #ff003c;
-    font-weight: 900;
-    letter-spacing: 2px;
-    font-size: 2.5rem;
-}
-
-header p {
-    color: #e0e6ed;
-    font-size: 1.2rem;
-    margin-top: 8px;
-}
-
-/* Main section styles */
-main {
-    padding: 20px;
-}
-
-/* Section styles */
-section {
-    margin: 20px 0;
-    padding: 24px;
-    background: #181f2b;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(31,64,104,0.10);
-    border-left: 8px solid #ff003c;
-}
-
-section h2 {
-    color: #ff003c;
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-a, .nav-item > a {
-    color: #ff003c;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-a:hover, .nav-item > a:hover {
-    color: #fff;
-}
-
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 16px 0;
-    background: #181f2b;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 1.1rem;
-    border-top: 2px solid #ff003c;
-}
-
-/* Barra de navegação superior */
-.navbar {
-    background: #10131a;
-    color: #fff;
-    box-shadow: 0 2px 12px rgba(31,64,104,0.18);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 2px solid #ff003c;
-}
-
-.navbar-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Destaque para projetos */
+.project {
+    background: linear-gradient(135deg, #232b38 80%, #2d3542 100%);
+    border-left: 5px solid #ff003c;
+    border-radius: 1rem;
+    box-shadow: 0 4px 32px rgba(255,0,60,0.08), 0 2px 8px rgba(31,64,104,0.10);
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+}
+.project:hover {
+    background: linear-gradient(135deg, #262f3a 80%, #232b38 100%);
+    box-shadow: 0 8px 40px rgba(255,0,60,0.15), 0 4px 16px rgba(31,64,104,0.15);
+    transform: scaleY(1.01);
+}
+
+/* Foto de perfil */
+.profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff003c;
+    box-shadow: 0 4px 16px rgba(31,64,104,0.18);
+    background: #232b38;
+}
+
+/* Contatos */
+.contact-icon {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    height: 56px;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    color: #ff003c;
-    text-transform: uppercase;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-item > a {
-    color: #fff;
-    text-decoration: none;
-    padding: 16px 18px;
-    display: block;
-    transition: background 0.2s, color 0.2s;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1.05rem;
-}
-
-.nav-item > a:hover {
-    background: #ff003c;
-    color: #fff;
-}
-
-.dropdown-menu {
+    gap: 10px;
     background: #232b38;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 16px rgba(31,64,104,0.15);
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 160px;
-    z-index: 100;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(31,64,104,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    font-weight: 500;
+}
+.contact-icon i {
+    font-size: 1.4em;
+}
+.contact-icon.email:hover {
+    background: #ff003c;
+    color: #fff;
+    transform: scale(1.08);
+}
+.contact-icon.email:hover i {
+    animation: icon-pop 0.4s;
+    color: #fff;
+    filter: drop-shadow(0 0 6px #ff003caa);
+}
+.contact-icon.github:hover {
+    background: #6e40c9;
+    color: #fff;
+    transform: scale(1.08);
+}
+.contact-icon.github:hover i {
+    animation: icon-pop 0.4s;
+    color: #fff;
+    filter: drop-shadow(0 0 6px #6e40c9aa);
+}
+.contact-icon.linkedin:hover {
+    background: #0a66c2;
+    color: #fff;
+    transform: scale(1.08);
+}
+.contact-icon.linkedin:hover i {
+    animation: icon-pop 0.4s;
+    color: #fff;
+    filter: drop-shadow(0 0 6px #0a66c2aa);
+}
+.contact-icon.whatsapp:hover {
+    background: #25d366;
+    color: #181f2b;
+    transform: scale(1.08);
+}
+.contact-icon.whatsapp:hover i {
+    animation: icon-pop 0.4s;
+    color: #181f2b;
+    filter: drop-shadow(0 0 6px #25d366aa);
 }
 
-.dropdown-menu li a {
-    color: #fff;
-    padding: 12px 20px;
-    font-size: 1rem;
+/* Animação dos ícones */
+@keyframes icon-pop {
+    0% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+    60% { transform: scale(1.18) rotate(-12deg); filter: brightness(1.4); }
+    100% { transform: scale(1.1) rotate(0deg); filter: brightness(1.2); }
+}
+
+/* Responsivo para contatos */
+@media (max-width: 800px) {
+    .contact-list {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+}
+
+/* Estilos para a seção com fundo escuro */
+.bg-dark {
+    background-color: #181f2b;
+}
+
+.text-light {
+    color: #ffffff;
+}
+
+.py-4 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.rounded-4 {
+    border-radius: 1.5rem;
+}
+
+.my-4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para o cartão com fundo escuro e borda vermelha */
+.card {
+    background-color: #181f2b;
+    border: 1px solid #ff003c;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 32px rgba(255,0,60,0.08), 0 2px 8px rgba(31,64,104,0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 40px rgba(255,0,60,0.15), 0 4px 16px rgba(31,64,104,0.15);
+}
+
+/* Estilos para o fundo gradiente azul e preto */
+.bg-black-blue {
+    background: linear-gradient(135deg, #10131a 0%, #232b38 100%) !important;
+    color: #e0e6ed !important;
+}
+
+/* Estilos para botões */
+.btn-github {
+    border-color: #6e40c9 !important;
+    color: #fff !important;
+    background-color: #232b38 !important;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.btn-github:hover, .btn-github:focus {
+    box-shadow: 0 0 0 3px #6e40c9;
+    border-color: #6e40c9 !important;
+}
+
+/* Classe para borda roxa */
+.border-purple {
+    border-color: #6e40c9 !important;
+}
+.btn-outline.border-purple:hover, .btn-outline.border-purple:focus {
+    background-color: #6e40c9 !important;
+    color: #fff !important;
+    border-color: #6e40c9 !important;
+}
+.btn-outline.border-purple:hover .fa-github,
+.btn-outline.border-purple:focus .fa-github {
+    color: #fff !important;
+}
+
+/* Estilos para botões de contato */
+.contact-btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.contact-btn:hover,
+.contact-btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(31,64,104,0.18), 0 2px 8px rgba(110,64,201,0.12);
+}
+
+/* Estilos para o menu de navegação */
+.nav-item.dropdown:hover .dropdown-menu {
     display: block;
-    text-decoration: none;
-    border-radius: 0;
+}
+.navbar .nav-link.dropdown-toggle {
+    cursor: pointer;
+}
+
+/* Dropdown customizado para padrão escuro e borda vermelha */
+.dropdown-menu {
+    background-color: #181f2b !important;
+    border: 1.5px solid #ff003cc0 !important;
+    box-shadow: 0 4px 24px rgba(255,0,60,0.10), 0 2px 8px rgba(31,64,104,0.10);
+    color: #fff;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s, transform 0.25s;
+    pointer-events: none;
+    visibility: hidden;
+    display: block; /* Bootstrap controla a exibição via .show */
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Animação e exibição ao abrir (mobile e desktop) */
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+}
+
+/* Só mostra o dropdown no hover em telas grandes */
+@media (min-width: 992px) {
+    .navbar .nav-item.dropdown:hover > .dropdown-menu,
+    .navbar .nav-item.dropdown:focus-within > .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
+    }
+    /* Impede o clique de abrir/fechar no desktop */
+    .navbar .nav-item.dropdown .dropdown-toggle {
+        pointer-events: none;
+    }
+}
+
+.dropdown-item {
+    color: #fff !important;
     transition: background 0.2s, color 0.2s;
 }
 
-.dropdown-menu li a:hover {
-    background: #ff003c;
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #ff003c !important;
+    color: #fff !important;
+}
+
+/* Estilo para dropdown customizado */
+.dropdown-menu-dark {
+    background-color: #181f2b;
+    border: 1px solid #ff003c;
+}
+
+.dropdown-menu-dark .dropdown-item {
     color: #fff;
+    transition: background 0.3s, color 0.3s;
 }
 
-.nav-item:hover .dropdown-menu {
-    display: block;
-}
-
-/* Destaque para botões de projetos */
-.btn-projeto {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 10px 24px;
-    background: #ff003c;
+.dropdown-menu-dark .dropdown-item:hover {
+    background-color: #ff003c;
     color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(255,0,60,0.12);
-}
-
-.btn-projeto:hover {
-    background: #fff;
-    color: #ff003c;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 4px 16px rgba(255,0,60,0.18);
-}
-
-/* Estilo para cada projeto */
-.project {
-    margin-bottom: 32px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #232b38;
 }
