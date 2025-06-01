@@ -13,11 +13,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ff003c'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='37' font-family='Montserrat,Arial,sans-serif' fill='black' font-weight='900'%3EJC%3C/text%3E%3C/svg%3E">
+    <style>
+        html {
+            scroll-padding-top: 80px; /* ajuste para a altura real da sua navbar */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-danger sticky-top">
     <div class="container">
-        <a class="navbar-brand text-danger fw-bold" href="#">Portfólio de João Victor</a>
+        <a class="navbar-brand text-danger fw-bold destaque-botao" href="#">João Contarim</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,36 +31,39 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="0">
-                        Projetos
+                    <a class="nav-link dropdown-toggle destaque-menu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="0">
+                        Destaques
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#projects">Ver Projetos</a></li>
-                        <li><a class="dropdown-item" href="#">Destaques</a></li>
+                        <li><a class="dropdown-item" href="#about">Sobre mim</a></li>
+                        <li><a class="dropdown-item" href="#projects">Projetos</a></li>
+                        <li><a class="dropdown-item" href="#skills">Hard Skills</a></li>
+                        <li><a class="dropdown-item" href="#contact">Contato</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle curriculo-menu" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Currículo
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <li>
                             <a class="dropdown-item" href="assets/Curriculo/João_Victor_Contarim.pdf" target="_blank">
-                                Visualizar Currículo
+                                Visualizar
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="assets/Curriculo/João_Victor_Contarim.pdf" download>
-                                Baixar Currículo
+                                Baixar
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contato</a>
-                </li>
             </ul>
+            <!-- Cotação do dólar alinhada à direita -->
+            <span id="cotacao-dolar" class="ms-4 text-light small cotacao-menu" style="white-space:nowrap;">
+                USD/BRL: <span id="valor-dolar"></span>
+            </span>
         </div>
     </div>
 </nav>
@@ -67,7 +75,7 @@
             <div>
                 <h1 class="fw-bold text-danger mb-1" style="font-size:2.3rem;">Bem-vindo ao Meu Portfólio</h1>
                 <p class="fw-bold mb-1" style="font-size:1.5rem; color:#ffffffd7;">João Victor Mendes Contarim</p>
-                <p class="fw-semibold mb-2" style="font-size:1.2rem; color:#ffffffd7;">Desenvolvedor Full-Stack</p>
+                <p class="fw-semibold mb-2" style="font-size:1.2rem; color:#ffffffd7;">Desenvolvedor Back-end</p>
                 <div class="d-flex gap-3 mt-2">
                     <a href="mailto:joaocontar@hotmail.com" target="_blank" class="btn btn-outline-danger rounded-circle contact-btn" title="E-mail">
                         <i class="fas fa-envelope"></i>
@@ -102,12 +110,24 @@
         <h2 class="text-danger mb-4">Meus Projetos</h2>
         <div class="card bg-dark text-light border-danger mb-4 shadow">
             <div class="card-body">
-                <h5 class="card-title text-danger">Gerador de Senhas Aleatórias</h5>
-                <p class="card-text">
-                    Projeto web para gerar senhas seguras e aleatórias.<br>
-                    <strong>Tecnologias:</strong> HTML, CSS, JavaScript e Flask (Python).
-                </p>
-                <a href="https://gerador-de-senhas-2gah.onrender.com/" target="_blank" class="btn btn-danger">Acessar Projeto</a>
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-md-6">
+                        <h3 class="card-title text-danger fw-bold">Gerador de Senhas Aleatórias</h3>
+                        <br><br>
+                        <p class="card-text" style="line-height: 25px;">
+                            Projeto web para gerar senhas seguras e aleatórias.<br>
+                            <strong>Tecnologias:</strong> HTML, CSS, JavaScript e Flask (Python).
+                        </p>
+                        <a href="https://gerador-de-senhas-2gah.onrender.com/" target="_blank" class="btn btn-danger">Acessar Projeto</a>
+                    </div>
+                    <div class="col-12 col-md-6 text-center">
+                        <img src="assets/Imagens/Gerador_de_Senhas.png"
+                            alt="Gerador de Senhas"
+                            class="img-fluid rounded"
+                            style="max-height:100%; object-fit:contain; width:100%; box-shadow: 0 0 15px #ff003c; cursor:pointer;"
+                            id="imgSenha">
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Outros projetos -->
@@ -117,10 +137,21 @@
         <h2 class="text-danger mb-4">Minhas Habilidades</h2>
         <div class="card bg-dark text-light border-danger mb-4 shadow">
             <div class="card-body">
-                <ul class="mb-0">
-                    <li>Habilidade 1</li>
-                    <li>Habilidade 2</li>
-                    <li>Habilidade 3</li>
+                <ul class="mb-0 list-unstyled d-flex flex-wrap gap-4 align-items-center justify-content-center habilidades-icones">
+                    <li title="Python"><i class="fab fa-python habilidade-icone" style="color:#3776AB"></i></li>
+                    <li title="Flask">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="habilidade-icone" style="filter:invert(1);">
+                    </li>
+                    <li title="PostgreSQL">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="habilidade-icone">
+                    </li>
+                    <li title="HTML5"><i class="fab fa-html5 habilidade-icone" style="color:#e34c26"></i></li>
+                    <li title="CSS3"><i class="fab fa-css3-alt habilidade-icone" style="color:#1572B6"></i></li>
+                    <li title="Git"><i class="fab fa-git-alt habilidade-icone" style="color:#f34f29"></i></li>
+                    <li title="Linux"><i class="fab fa-linux habilidade-icone" style="color:#fff700"></i></li>
+                    <li title="Inteligência Artificial">
+                        <img class="habilidade-icone" alt="Inteligência Artificial" style="background:none; filter:invert(1);" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg">
+                    </li>
                 </ul>
             </div>
         </div>
@@ -154,5 +185,41 @@
     <!-- Bootstrap Bundle JS (inclui Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/JS/JS"></script>
+    
+<!-- Lightbox -->
+<div id="lightboxSenha" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; backdrop-filter: blur(6px); z-index:2000; justify-content:center; align-items:center;">
+    <img src="assets/Imagens/Gerador_de_Senhas.png" alt="Gerador de Senhas"
+        style="max-width:95vw; max-height:95vh; border-radius:12px; pointer-events:auto; box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.938);">
+</div>
+<script>
+document.getElementById('imgSenha').onclick = function() {
+    document.getElementById('lightboxSenha').style.display = 'flex';
+};
+document.getElementById('lightboxSenha').onclick = function(e) {
+    // Fecha só se clicar fora da imagem
+    if (e.target === this) {
+        this.style.display = 'none';
+    }
+};
+</script>
+<script>
+function atualizarCotacao() {
+    fetch('https://economia.awesomeapi.com.br/json/last/USD-BRL')
+        .then(res => res.json())
+        .then(data => {
+            const valor = Number(data.USDBRL.bid).toLocaleString('pt-BR', {style:'currency', currency:'BRL'});
+            document.getElementById('valor-dolar').textContent = valor;
+        })
+        .catch(() => {
+            document.getElementById('valor-dolar').textContent = 'erro';
+        });
+}
+
+// Atualiza ao carregar
+atualizarCotacao();
+// Atualiza a cada 60 segundos
+setInterval(atualizarCotacao, 60000);
+
+</script>
 </body>
 </html>

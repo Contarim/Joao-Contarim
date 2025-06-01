@@ -19,106 +19,6 @@ body {
     padding: 0 1rem;
 }
 
-/* Destaque para projetos */
-.project {
-    background: linear-gradient(135deg, #232b38 80%, #2d3542 100%);
-    border-left: 5px solid #ff003c;
-    border-radius: 1rem;
-    box-shadow: 0 4px 32px rgba(255,0,60,0.08), 0 2px 8px rgba(31,64,104,0.10);
-    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
-}
-.project:hover {
-    background: linear-gradient(135deg, #262f3a 80%, #232b38 100%);
-    box-shadow: 0 8px 40px rgba(255,0,60,0.15), 0 4px 16px rgba(31,64,104,0.15);
-    transform: scaleY(1.01);
-}
-
-/* Foto de perfil */
-.profile-photo {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ff003c;
-    box-shadow: 0 4px 16px rgba(31,64,104,0.18);
-    background: #232b38;
-}
-
-/* Contatos */
-.contact-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #232b38;
-    color: #fff;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(31,64,104,0.10);
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    font-weight: 500;
-}
-.contact-icon i {
-    font-size: 1.4em;
-}
-.contact-icon.email:hover {
-    background: #ff003c;
-    color: #fff;
-    transform: scale(1.08);
-}
-.contact-icon.email:hover i {
-    animation: icon-pop 0.4s;
-    color: #fff;
-    filter: drop-shadow(0 0 6px #ff003caa);
-}
-.contact-icon.github:hover {
-    background: #6e40c9;
-    color: #fff;
-    transform: scale(1.08);
-}
-.contact-icon.github:hover i {
-    animation: icon-pop 0.4s;
-    color: #fff;
-    filter: drop-shadow(0 0 6px #6e40c9aa);
-}
-.contact-icon.linkedin:hover {
-    background: #0a66c2;
-    color: #fff;
-    transform: scale(1.08);
-}
-.contact-icon.linkedin:hover i {
-    animation: icon-pop 0.4s;
-    color: #fff;
-    filter: drop-shadow(0 0 6px #0a66c2aa);
-}
-.contact-icon.whatsapp:hover {
-    background: #25d366;
-    color: #181f2b;
-    transform: scale(1.08);
-}
-.contact-icon.whatsapp:hover i {
-    animation: icon-pop 0.4s;
-    color: #181f2b;
-    filter: drop-shadow(0 0 6px #25d366aa);
-}
-
-/* Animação dos ícones */
-@keyframes icon-pop {
-    0% { transform: scale(1) rotate(0deg); filter: brightness(1); }
-    60% { transform: scale(1.18) rotate(-12deg); filter: brightness(1.4); }
-    100% { transform: scale(1.1) rotate(0deg); filter: brightness(1.2); }
-}
-
-/* Responsivo para contatos */
-@media (max-width: 800px) {
-    .contact-list {
-        flex-direction: column;
-        gap: 10px;
-        align-items: stretch;
-    }
-}
-
 /* Estilos para a seção com fundo escuro */
 .bg-dark {
     background-color: #181f2b;
@@ -156,22 +56,14 @@ body {
     box-shadow: 0 8px 40px rgba(255,0,60,0.15), 0 4px 16px rgba(31,64,104,0.15);
 }
 
-/* Estilos para o fundo gradiente azul e preto */
-.bg-black-blue {
-    background: linear-gradient(135deg, #10131a 0%, #232b38 100%) !important;
-    color: #e0e6ed !important;
+/* Estilos para botões de contato */
+.contact-btn {
+    transition: transform 0.2s, box-shadow 0.2s;
 }
-
-/* Estilos para botões */
-.btn-github {
-    border-color: #6e40c9 !important;
-    color: #fff !important;
-    background-color: #232b38 !important;
-    transition: background 0.2s, color 0.2s, border 0.2s;
-}
-.btn-github:hover, .btn-github:focus {
-    box-shadow: 0 0 0 3px #6e40c9;
-    border-color: #6e40c9 !important;
+.contact-btn:hover,
+.contact-btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(31,64,104,0.18), 0 2px 8px rgba(110,64,201,0.12);
 }
 
 /* Classe para borda roxa */
@@ -188,22 +80,26 @@ body {
     color: #fff !important;
 }
 
-/* Estilos para botões de contato */
-.contact-btn {
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.contact-btn:hover,
-.contact-btn:focus {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(31,64,104,0.18), 0 2px 8px rgba(110,64,201,0.12);
-}
-
 /* Estilos para o menu de navegação */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
 .navbar .nav-link.dropdown-toggle {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1em;
+}
+.navbar .nav-link.dropdown-toggle::after {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-top: -3px;
+    background: url('data:image/svg+xml;utf8,<svg fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5.23 7.21a1 1 0 011.42 0L10 10.59l3.35-3.38a1 1 0 111.42 1.42l-4.06 4.09a1 1 0 01-1.42 0L5.23 8.63a1 1 0 010-1.42z"/></svg>') no-repeat center/contain;
+    border: none;
+    vertical-align: middle;
 }
 
 /* Dropdown customizado para padrão escuro e borda vermelha */
@@ -270,3 +166,76 @@ body {
     background-color: #ff003c;
     color: #fff;
 }
+
+/* Lightbox para imagem do projeto */
+#lightboxSenha {
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+}
+#lightboxSenha[style*="display: flex"] {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Padronize o tamanho dos ícones de habilidades */
+.habilidade-icone {
+    width: 2.2rem !important;
+    height: 2.2rem !important;
+    min-width: 2.2rem !important;
+    min-height: 2.2rem !important;
+    max-width: 2.2rem !important;
+    max-height: 2.2rem !important;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: none !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Para garantir que os ícones Font Awesome fiquem do mesmo tamanho */
+.habilidade-icone.fab,
+.habilidade-icone.fas,
+.habilidade-icone.far {
+    font-size: 2.2rem !important;
+    width: 2.2rem !important;
+    height: 2.2rem !important;
+    line-height: 2.2rem !important;
+}
+
+/* Alinhamento dos itens */
+.habilidades-icones li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Estilos para botões em destaque */
+.destaque-botao {
+    background: #181f2b;
+    border: 2px solid #ff003c;
+    border-radius: 0.5rem;
+    padding: 0.35em 1em;
+    box-shadow: 0 2px 12px rgba(255,0,60,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.destaque-menu {
+    color: #fff !important; /* vermelho destaque */
+    font-weight: bold;
+}
+
+.curriculo-menu {
+    color: #ffffff !important; /* roxo */
+    font-weight: bold;
+}
+
