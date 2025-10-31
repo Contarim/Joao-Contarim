@@ -124,13 +124,33 @@
                         <img src="assets/Imagens/Gerador_de_Senhas.png"
                             alt="Gerador de Senhas"
                             class="img-fluid rounded"
-                            style="max-height:100%; object-fit:contain; width:100%; box-shadow: 0 0 15px #ff003c; cursor:pointer;"
-                            id="imgSenha">
+                            style="max-height:100%; object-fit:contain; width:100%; box-shadow: 0 0 15px #ff003c; cursor:pointer;" id="imgSenha">
                     </div>
                 </div>
             </div>
         </div>
         <!-- Outros projetos -->
+        <div class="card bg-dark text-light border-danger mb-4 shadow">
+            <div class="card-body">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-md-6">
+                        <h3 class="card-title text-danger fw-bold">Plataforma de investimento</h3>
+                        <br><br>
+                        <p class="card-text" style="line-height: 25px;">
+                            Projeto web feito a partir de um trabalho da FIAP<br>
+                            <strong>Tecnologias:</strong> HTML, CSS, JavaScript.
+                        </p>
+                        <a href="https://contarim.github.io/ConInvest/" target="_blank" class="btn btn-danger">Acessar Projeto</a>
+                    </div>
+                    <div class="col-12 col-md-6 text-center">
+                        <img src="assets/Imagens/Plataforma_Investimento.png"
+                            alt="Gerador de Senhas"
+                            class="img-fluid rounded"
+                            style="max-height:100%; object-fit:contain; width:100%; box-shadow: 0 0 15px #ff003c; cursor:pointer;" id="imgInvestimento">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="skills" class="container my-5">
@@ -186,22 +206,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/JS/JS"></script>
     
-<!-- Lightbox -->
-<div id="lightboxSenha" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; backdrop-filter: blur(6px); z-index:2000; justify-content:center; align-items:center;">
-    <img src="assets/Imagens/Gerador_de_Senhas.png" alt="Gerador de Senhas"
-        style="max-width:95vw; max-height:95vh; border-radius:12px; pointer-events:auto; box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.938);">
+    <!-- Lightbox -->
+<div id="lightboxSenha" class="lightbox">
+    <img src="assets/Imagens/Gerador_de_Senhas.png" alt="Gerador de Senhas">
 </div>
+
+<div id="lightboxInvestimento" class="lightbox">
+    <img src="assets/Imagens/Plataforma_Investimento.png" alt="Plataforma de Investimento">
+</div>
+
 <script>
-document.getElementById('imgSenha').onclick = function() {
-    document.getElementById('lightboxSenha').style.display = 'flex';
-};
-document.getElementById('lightboxSenha').onclick = function(e) {
-    // Fecha só se clicar fora da imagem
-    if (e.target === this) {
-        this.style.display = 'none';
-    }
-};
+// Função para abrir um lightbox específico
+function abrirLightbox(id) {
+    document.getElementById(id).style.display = "flex";
+}
+
+// Fechar ao clicar fora da imagem
+document.getElementById("lightboxSenha").addEventListener("click", function(e) {
+    if (e.target === this) this.style.display = "none";
+});
+document.getElementById("lightboxInvestimento").addEventListener("click", function(e) {
+    if (e.target === this) this.style.display = "none";
+});
+
+// Liga o clique nas imagens
+document.getElementById("imgSenha").onclick = () => abrirLightbox("lightboxSenha");
+document.getElementById("imgInvestimento").onclick = () => abrirLightbox("lightboxInvestimento");
 </script>
+
 <script>
 function atualizarCotacao() {
     fetch('https://economia.awesomeapi.com.br/json/last/USD-BRL')

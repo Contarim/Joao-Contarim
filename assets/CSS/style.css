@@ -167,17 +167,27 @@ body {
     color: #fff;
 }
 
-/* Lightbox para imagem do projeto */
-#lightboxSenha {
-    transition: opacity 0.3s;
-    opacity: 0;
-    pointer-events: none;
-    display: flex;
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
 }
-#lightboxSenha[style*="display: flex"] {
-    opacity: 1;
+
+.lightbox img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 12px;
     pointer-events: auto;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.938);
 }
+
 
 /* Padronize o tamanho dos ícones de habilidades */
 .habilidade-icone {
