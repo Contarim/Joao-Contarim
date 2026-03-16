@@ -91,7 +91,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+</div>
     </header>
 
     <section id="about" class="container my-5">
@@ -99,7 +99,17 @@
         <div class="card bg-dark text-light border-danger mb-4 shadow">
             <div class="card-body">
                 <p>
-                    Olá! Sou João Victor Contarim, apaixonado por tecnologia e desenvolvimento de software.
+                    Olá! Meu nome é João Victor Contarim.
+                    <br><br>
+                    Sou apaixonado por tecnologia e desenvolvimento de software. Atualmente possuo conhecimentos em Kotlin, Java e SQL para desenvolvimento backend, além de HTML, CSS e JavaScript para desenvolvimento frontend.
+                    <br><br>
+                    Além dessas tecnologias, também tenho facilidade em utilizar ferramentas de inteligência artificial para auxiliar na resolução de problemas e no desenvolvimento de projetos.
+                    <br><br>
+                    Estou em constante busca por evolução e aprendizado para conquistar minha primeira oportunidade na área de desenvolvimento de software.
+                    <br><br>
+                    Abaixo você pode encontrar meus contatos, caso queira falar comigo.
+                    <br><br>
+                    Obrigado por visitar meu portfólio.
                 </p>
             </div>
         </div>
@@ -128,7 +138,6 @@
                 </div>
             </div>
         </div>
-        <!-- Outros projetos -->
         <div class="card bg-dark text-light border-danger mb-4 shadow">
             <div class="card-body">
                 <div class="row align-items-center g-4">
@@ -136,7 +145,7 @@
                         <h3 class="card-title text-danger fw-bold">Plataforma de investimento</h3>
                         <br><br>
                         <p class="card-text" style="line-height: 25px;">
-                            Projeto web feito a partir de um trabalho da FIAP<br>
+                            Projeto web feito a partir de um trabalho da FIAP.<br>
                             <strong>Tecnologias:</strong> HTML, CSS, JavaScript.
                         </p>
                         <a href="https://contarim.github.io/ConInvest/" target="_blank" class="btn btn-danger">Acessar Projeto</a>
@@ -146,6 +155,28 @@
                             alt="Gerador de Senhas"
                             class="img-fluid rounded"
                             style="max-height:100%; object-fit:contain; width:100%; box-shadow: 0 0 15px #ff003c; cursor:pointer;" id="imgInvestimento">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card bg-dark text-light border-danger mb-4 shadow">
+            <div class="card-body">
+                <div class="row align-items-center g-4">
+                    <div class="col-12 col-md-8">
+                        <h3 class="card-title text-danger fw-bold">Aplicativo CuidaIdoso</h3>
+                        <br><br>
+                        <p class="card-text" style="line-height: 25px;">
+                            Aplicativo criado com o objetivo de auxiliar no cuidado e acompanhamento de pessoas idosas.<br>
+                            <strong>Tecnologias:</strong> Kotlin e Jetpack Compose.
+                        </p>
+                        <a href="https://github.com/Contarim/Cuidaidoso" target="_blank" class="btn btn-danger">Acessar Projeto</a>
+                        <a href="./assets/Files/CuidaIdoso.apk" class="btn btn-danger" download>Baixar APK (Android)</a>
+                    </div>
+                    <div class="col-12 col-md-3 text-center">
+                        <img src="./assets/Imagens/CuidaIdoso_Tela_Inicial.png"
+                            alt="Aplicativo CuidaIdoso"
+                            class="img-fluid rounded"
+                            style="max-height:100%; object-fit:contain; width:100%; box-shadow: 0 0 15px #ff003c; cursor:pointer;" id="imgCuidaidoso">
                     </div>
                 </div>
             </div>
@@ -169,7 +200,13 @@
                     <li title="Git"><i class="fab fa-git-alt habilidade-icone" style="color:#f34f29"></i></li>
                     <li title="Linux"><i class="fab fa-linux habilidade-icone" style="color:#fff700"></i></li>
                     <li title="Inteligência Artificial">
-                        <img class="habilidade-icone" alt="Inteligência Artificial" style="background:none; filter:invert(1);" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg">
+                        <img class="habilidade-icone" alt="Inteligência Artificial" style="background:none; filter:invert(1);" src="./assets/Imagens/gpt.png">
+                    </li>
+                        <li title="Java">
+                        <img class="habilidade-icone" alt="Java" style="background:none; filter:invert(1);" src="./assets/Imagens/java.png">
+                    </li>
+                        <li title="Kotlin">
+                        <img class="habilidade-icone" alt="Kotlin" style="background:none; filter:invert(1);" src="./assets/Imagens/kotlin.png">
                     </li>
                 </ul>
             </div>
@@ -199,7 +236,7 @@
     </section>
 
     <footer class="bg-dark text-light text-center py-3 border-top border-danger mt-5">
-        &copy; 2025 João Victor Contarim. Todos os direitos reservados.
+        &copy; 2026 João Victor Contarim. Todos os direitos reservados.
     </footer>
     <!-- Bootstrap Bundle JS (inclui Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -212,6 +249,10 @@
 
 <div id="lightboxInvestimento" class="lightbox">
     <img src="assets/Imagens/Plataforma_Investimento.png" alt="Plataforma de Investimento">
+</div>
+
+<div id="lightboxCuidaidoso" class="lightbox">
+    <img src="./assets/Imagens/CuidaIdoso_Tela_Inicial.png" alt="CuidaIdoso">
 </div>
 
 <script>
@@ -227,10 +268,14 @@ document.getElementById("lightboxSenha").addEventListener("click", function(e) {
 document.getElementById("lightboxInvestimento").addEventListener("click", function(e) {
     if (e.target === this) this.style.display = "none";
 });
+document.getElementById("lightboxCuidaidoso").addEventListener("click", function(e) {
+    if (e.target === this) this.style.display = "none";
+});
 
 // Liga o clique nas imagens
 document.getElementById("imgSenha").onclick = () => abrirLightbox("lightboxSenha");
 document.getElementById("imgInvestimento").onclick = () => abrirLightbox("lightboxInvestimento");
+document.getElementById("imgCuidaidoso").onclick = () => abrirLightbox("lightboxCuidaidoso");
 </script>
 
 <script>
