@@ -2,10 +2,6 @@
 
 Bem-vindo ao meu portfólio pessoal! Este projeto é uma vitrine moderna e profissional desenvolvida para apresentar minha trajetória, habilidades técnicas e os principais projetos em que venho trabalhando.
 
-<div align="center">
-  <img src="./assets/Imagens/Gerador_de_Senhas.png" alt="Portfolio Preview" width="100%">
-</div>
-
 ## 🚀 Sobre o Projeto
 
 Este portfólio foi concebido com uma estética **Premium Dark Mode**, focada em legibilidade, performance e uma experiência de usuário fluida. Mais do que uma simples página estática, ele integra elementos dinâmicos e refinações de design para demonstrar atenção aos detalhes.
