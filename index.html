@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Local CSS (must be after Bootstrap) -->
+    <link rel="stylesheet" href="assets/CSS/style.css"> 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ff003c'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-size='37' font-family='Outfit,Arial,sans-serif' fill='black' font-weight='900'%3EJC%3C/text%3E%3C/svg%3E">
+</head>
+<body class="bg-dark text-light overflow-x-hidden">
+    <!-- Fundo Animado -->
+    <div class="bg-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top glass">
+    <div class="container">
+        <a class="navbar-brand text-danger fw-bold" href="#">
+            <span class="text-danger">João</span><span class="text-white">Contarim</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Sobre mim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contato</a>
+                </li>
+                <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle resume-btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-file-pdf me-1"></i> Currículo
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="assets/files/João_Victor_Contarim.pdf" target="_blank">Visualizar</a></li>
+                        <li><a class="dropdown-item" href="assets/files/João_Victor_Contarim.pdf" download>Baixar PDF</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Cotação do dólar -->
+            <span id="cotacao-dolar" class="ms-lg-4 text-muted small" style="white-space:nowrap;">
+                <i class="fas fa-chart-line me-1"></i> USD/BRL: <span id="valor-dolar" class="text-light fw-medium"></span>
+            </span>
+        </div>
+    </div>
+</nav>
+
+
+    <header class="py-5 mb-5 overflow-hidden">
+        <div class="container" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-lg-2 text-center text-lg-start mb-4 mb-lg-0">
+                    <div class="position-relative d-inline-block">
+                        <img src="assets/Imagens/eu.png" alt="Foto de João" class="rounded-circle border border-2 border-danger shadow-lg" style="width:160px;height:160px;object-fit:cover;">
+                        <div class="position-absolute bottom-0 end-0 bg-success border border-2 border-dark rounded-circle" style="width:20px;height:20px;"></div>
+                    </div>
+                </div>
+                <div class="col-lg-10 text-center text-lg-start">
+                    <h1 class="display-4 fw-800 text-white mb-2">Bem-vindo ao Meu <span class="text-danger">Portfólio</span></h1>
+                    <p class="h3 fw-600 text-light mb-1 shadow-sm">João Victor Mendes Contarim</p>
+                    <p class="h5 text-muted mb-4">Desenvolvedor Fullstack</p>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                        <a href="mailto:joaocontar@hotmail.com" target="_blank" class="btn btn-outline-danger contact-btn" title="E-mail">
+                            <i class="fas fa-envelope"></i> E-mail
+                        </a>
+                        <a href="https://www.linkedin.com/in/joao-contarim" target="_blank" class="btn btn-outline-primary contact-btn" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Contarim" target="_blank" class="btn btn-outline-secondary contact-btn" title="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://wa.me/16991501035" target="_blank" class="btn btn-outline-success contact-btn" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="container my-5 pt-5">
+        <h2 class="section-title" data-aos="fade-right">Sobre Mim</h2>
+        <div class="card p-4 p-md-5" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="lead text-light mb-4">
+                        Olá! Meu nome é <span class="text-danger fw-bold">João Victor Contarim</span>.
+                    </p>
+                    <p class="text-muted fs-5" style="text-align: justify;">
+                        Sou apaixonado por tecnologia e desenvolvimento de software. Atualmente possuo conhecimentos em <strong>Kotlin, Java e SQL</strong> para desenvolvimento backend, além de <strong>HTML, CSS e JavaScript</strong> para desenvolvimento frontend.
+                    </p>
+                    <p class="text-muted fs-5" style="text-align: justify;">
+                        Além dessas tecnologias, também tenho facilidade em utilizar ferramentas de inteligência artificial para auxiliar na resolução de problemas e no desenvolvimento de projetos.
+                    </p>
+                    <p class="text-muted fs-5 mb-0" style="text-align: justify;">
+                        Estou em constante busca por evolução e aprendizado para conquistar minha primeira oportunidade na área de desenvolvimento de software. Agradeço por visitar meu portfólio e sinta-se à vontade para entrar em contato!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container my-5 pt-5">
+        <h2 class="section-title" data-aos="fade-right">Meus Projetos</h2>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Projeto 1 -->
+                <div class="carousel-item active">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card p-0 h-100 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-6 order-md-2 p-4 p-lg-5">
+                                    <h3 class="fw-bold text-danger mb-3">Gerador de Senhas Aleatórias</h3>
+                                    <span class="badge bg-danger mb-2">Web App</span>
+                                    <p class="text-muted mb-4 fs-5">
+                                        Projeto web focado em segurança, permitindo a geração de senhas complexas e customizáveis.
+                                    </p>
+                                    <div class="mb-4">
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">Python</span>
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">Flask</span>
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">JavaScript</span>
+                                    </div>
+                                    <a href="https://gerador-de-senhas-2gah.onrender.com/" target="_blank" class="btn btn-outline-danger contact-btn">
+                                        <i class="fas fa-external-link-alt me-2"></i> Acessar Projeto
+                                    </a>
+                                </div>
+                                <div class="col-md-6 order-md-1">
+                                    <div class="project-img-container">
+                                        <img src="assets/Imagens/Gerador_de_Senhas.png" alt="Gerador de Senhas" class="img-fluid project-img-desktop" style="cursor:pointer;" id="imgSenha">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="carousel-item">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card p-0 h-100 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-6 p-4 p-lg-5">
+                                    <h3 class="fw-bold text-danger mb-3">Plataforma de Investimento</h3>
+                                    <span class="badge bg-danger mb-2">Interface UI/UX</span>
+                                    <p class="text-muted mb-4 fs-5">
+                                        Interface desenvolvida para simular e gerenciar investimentos, focada em UX/UI intuitivo.
+                                    </p>
+                                    <div class="mb-4">
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">HTML5</span>
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">CSS3</span>
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">JavaScript</span>
+                                    </div>
+                                    <a href="https://contarim.github.io/ConInvest/" target="_blank" class="btn btn-outline-danger contact-btn">
+                                        <i class="fas fa-external-link-alt me-2"></i> Acessar Projeto
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="project-img-container">
+                                        <img src="assets/Imagens/Plataforma_Investimento.png" alt="Plataforma de Investimento" class="img-fluid project-img-desktop" style="cursor:pointer;" id="imgInvestimento">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 (App Mobile) -->
+                <div class="carousel-item">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card p-0 h-100 overflow-hidden">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-5 order-md-1">
+                                    <div class="project-img-container">
+                                        <img src="./assets/Imagens/CuidaIdoso_Tela_Inicial.png" alt="CuidaIdoso" class="img-fluid project-img-mobile" style="cursor:pointer;" id="imgCuidaidoso">
+                                    </div>
+                                </div>
+                                <div class="col-md-7 order-md-2 p-4 p-lg-5">
+                                    <h3 class="fw-bold text-danger mb-3">Aplicativo CuidaIdoso</h3>
+                                    <span class="badge bg-danger mb-2">Android App</span>
+                                    <p class="text-muted mb-4 fs-5">
+                                        Solução mobile criada para auxiliar no monitoramento e cuidado diário de pessoas idosas.
+                                    </p>
+                                    <div class="mb-4">
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">Kotlin</span>
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">Jetpack Compose</span>
+                                        <span class="badge bg-dark border border-danger p-2 me-2 mb-2">Android</span>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <a href="https://github.com/Contarim/Cuidaidoso" target="_blank" class="btn btn-outline-danger contact-btn">
+                                            <i class="fab fa-github me-2"></i> GitHub
+                                        </a>
+                                        <a href="https://github.com/Contarim/Cuidaidoso/releases/latest/download/Cuidaidoso.apk" class="btn btn-danger contact-btn" download>
+                                            <i class="fas fa-download me-2"></i> Baixar APK
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="skills" class="container my-5 pt-5">
+        <h2 class="section-title" data-aos="fade-right">Minhas Habilidades</h2>
+        <div class="row g-4 justify-content-center">
+            <!-- Python -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="skill-card">
+                    <i class="fab fa-python skill-icon" style="color:#3776AB"></i>
+                    <span class="skill-name">Python</span>
+                </div>
+            </div>
+            <!-- Java -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+                <div class="skill-card">
+                    <img src="assets/Imagens/Java.png" alt="Java" class="skill-icon" style="width:2.5rem; height:2.5rem; filter:invert(1);">
+                    <span class="skill-name">Java</span>
+                </div>
+            </div>
+            <!-- Kotlin -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+                <div class="skill-card">
+                    <img src="assets/Imagens/Kotlin.png" alt="Kotlin" class="skill-icon" style="width:2.5rem; height:2.5rem; filter:invert(1);">
+                    <span class="skill-name">Kotlin</span>
+                </div>
+            </div>
+            <!-- Flask -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="400">
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="skill-icon" style="width:2.5rem; height:2.5rem; filter:invert(1);">
+                    <span class="skill-name">Flask</span>
+                </div>
+            </div>
+            <!-- PostgreSQL -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="500">
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-icon" style="width:2.5rem; height:2.5rem;">
+                    <span class="skill-name">PostgreSQL</span>
+                </div>
+            </div>
+            <!-- HTML5 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="600">
+                <div class="skill-card">
+                    <i class="fab fa-html5 skill-icon" style="color:#e34c26"></i>
+                    <span class="skill-name">HTML5</span>
+                </div>
+            </div>
+            <!-- CSS3 -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="700">
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt skill-icon" style="color:#1572B6"></i>
+                    <span class="skill-name">CSS3</span>
+                </div>
+            </div>
+            <!-- JS -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="800">
+                <div class="skill-card">
+                    <i class="fab fa-js skill-icon" style="color:#F7DF1E"></i>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+            </div>
+            <!-- Git -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="900">
+                <div class="skill-card">
+                    <i class="fab fa-git-alt skill-icon" style="color:#f34f29"></i>
+                    <span class="skill-name">Git</span>
+                </div>
+            </div>
+            <!-- Linux -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="1000">
+                <div class="skill-card">
+                    <i class="fab fa-linux skill-icon" style="color:#fff700"></i>
+                    <span class="skill-name">Linux</span>
+                </div>
+            </div>
+            <!-- AI -->
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="1100">
+                <div class="skill-card">
+                    <img src="assets/Imagens/GPT.png" alt="AI" class="skill-icon" style="width:2.5rem; height:2.5rem; filter:invert(1);">
+                    <span class="skill-name">AI Tools</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container my-5 pt-5 pb-5">
+        <h2 class="section-title" data-aos="fade-right">Vamos conversar?</h2>
+        <div class="card py-5 shadow-lg" data-aos="zoom-in">
+            <div class="text-center">
+                <p class="h4 text-light mb-4 text-center">Sinta-se à vontade para entrar em contato comigo através de qualquer um dos canais abaixo!</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="mailto:joaocontar@hotmail.com" class="btn btn-outline-danger contact-btn">
+                        <i class="fas fa-envelope"></i> joaocontar@hotmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/joao-contarim" target="_blank" class="btn btn-outline-primary contact-btn">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Contarim" target="_blank" class="btn btn-outline-secondary contact-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://wa.me/16991501035" target="_blank" class="btn btn-outline-success contact-btn">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center glass mt-5">
+        <div class="container">
+            <div class="mb-3">
+                <a href="https://github.com/Contarim" class="text-white me-3 fs-5"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joao-contarim" class="text-white me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/16991501035" class="text-white fs-5"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2026 João Victor Contarim. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Bootstrap Bundle JS (inclui Popper) -->
+    <!-- Lightbox elements -->
+    <div id="lightboxSenha" class="lightbox">
+        <img src="assets/Imagens/Gerador_de_Senhas.png" alt="Gerador de Senhas">
+    </div>
+    <div id="lightboxInvestimento" class="lightbox">
+        <img src="assets/Imagens/Plataforma_Investimento.png" alt="Plataforma de Investimento">
+    </div>
+    <div id="lightboxCuidaidoso" class="lightbox">
+        <img src="./assets/Imagens/CuidaIdoso_Tela_Inicial.png" alt="CuidaIdoso">
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/JS/main.js"></script>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top" title="Voltar ao Topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>
